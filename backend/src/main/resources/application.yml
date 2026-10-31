@@ -1,0 +1,25 @@
+server:
+  port: ${PORT:8080}
+
+exotel:
+  sid: ${EXOTEL_SID}
+  api-key: ${EXOTEL_API_KEY}
+  api-token: ${EXOTEL_API_TOKEN}
+  subdomain: ${EXOTEL_SUBDOMAIN:api.exotel.com}
+  caller-id: ${EXOTEL_CALLER_ID}
+
+vaanibridge:
+  app:
+    jwtSecret: ${JWT_SECRET:vaanibridgeSecretKeyForProductionAuthentication123}
+    jwtExpirationMs: ${JWT_EXPIRATION:86400000}
+
+spring:
+  main:
+    allow-bean-definition-overriding: true
+
+# For Production, you might want to use a real DB like PostgreSQL or MySQL
+# spring:
+#   datasource:
+#     url: ${DB_URL}
+#     username: ${DB_USER}
+#     password: ${DB_PASSWORD}
